@@ -1,6 +1,6 @@
-<script>
+<script lang="ts">
 	import Tailwind from './components/Tailwind.svelte';
-	export let name;
+	export let name: string;
 </script>
 
 <main>
