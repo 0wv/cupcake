@@ -11,11 +11,11 @@
     <div class="flex-initial m-2">
         <div class="p-4">
             {#if daysleft === -1}
-            1 day ago
+            Yesterday
             {:else if daysleft === 0}
             Today
             {:else if daysleft === 1}
-            1 day left
+            Tomorrow
             {:else if Math.sign(daysleft) === -1}
             {Math.abs(daysleft)} days ago
             {:else}
