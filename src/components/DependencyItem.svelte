@@ -25,7 +25,7 @@
     <div class="m-2">
         <div class="p-4">{@html (() => {
             const parser = new window.DOMParser()
-            const description = parser.parseFromString(marked(dependency.description), 'text/html')
+            const description = parser.parseFromString(marked(dependency.description || ''), 'text/html')
             ; [...description.querySelectorAll('a')].forEach(elem => {
                 elem.classList.add('underline')
             })
