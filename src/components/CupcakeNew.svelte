@@ -1,6 +1,7 @@
 <script lang="ts">
-    import { cupcakes } from '../stores'
+    import { color, cupcakes } from '../stores'
     import { DateTime } from 'luxon'
+    import style from 'svelte-inline-css'
 
     let date = DateTime.now()
     let value = ''
@@ -27,8 +28,12 @@
     <div class="flex-1 m-2">
         <input
             bind:value
-            class="p-4 rounded-full w-full"
+            class="border-2 p-4 rounded-full w-full"
             type="text"
+            use:style={{
+                backgroundColor: $color.background,
+                borderColor: $color.text,
+            }}
         >
     </div>
     <div class="flex-initial m-2">
@@ -39,8 +44,11 @@
     </div>
     <div class="flex-initial m-2">
         <button
-            class="p-4 rounded-full"
+            class="border-2 p-4 rounded-full"
             on:click={newCupcake}
+            use:style={{
+                borderColor: $color.text,
+            }}
         >New Cupcake</button>
     </div>
 </div>

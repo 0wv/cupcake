@@ -1,0 +1,9 @@
+[
+    {
+        "description": "This app uses colors made by Cynthia Brewer.",
+        "homepage": "http://colorbrewer2.org/",
+        "license": "Apache-2.0",
+        "name": "ColorBrewer",
+        "version": ""
+    }
+]
