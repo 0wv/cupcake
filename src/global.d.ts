@@ -1,5 +1,5 @@
 /// <reference types="svelte" />
 type Cupcake = {
-    date: DateTime
+    date: string
     value: string
 }

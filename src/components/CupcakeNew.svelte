@@ -9,11 +9,12 @@
 
     function newCupcake () {
         const cupcake: Cupcake = {
-            date,
+            date: date.toString(),
             value,
         }
         $cupcakes.push(cupcake)
         $cupcakes = $cupcakes
+        localStorage.setItem('cupcakes', JSON.stringify($cupcakes))
     }
 
     function onWheel (event) {

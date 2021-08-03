@@ -1,9 +1,10 @@
 <script lang="ts">
+    import { DateTime } from 'luxon'
     import { _ } from 'svelte-i18n'
 
     export let cupcake: Cupcake
 
-    const daysleft = Math.ceil(cupcake.date.diffNow('days').toObject().days)
+    const daysleft = Math.ceil(DateTime.fromISO(cupcake.date).diffNow('days').toObject().days)
 </script>
 
 <div class="flex">

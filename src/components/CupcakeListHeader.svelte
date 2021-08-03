@@ -2,12 +2,13 @@
     import { colorByName } from '../colors'
     import type { Color } from '../colors'
     import { color, cupcakes } from '../stores'
+    import { DateTime } from 'luxon'
     import { _ } from 'svelte-i18n'
     import style from 'svelte-inline-css'
 
     function removeExpiredCupcakes () {
         $cupcakes = $cupcakes.filter(cupcake => {
-            const daysleft = Math.ceil(cupcake.date.diffNow('days').toObject().days)
+            const daysleft = Math.ceil(DateTime.fromISO(cupcake.date).diffNow('days').toObject().days)
             return daysleft >= 0
         })
     }
@@ -44,7 +45,10 @@
                 {#if color.type === 'diverging'}
                 <button
                     class="border-0 h-8 rounded-full w-8"
-                    on:click={() => { setColor(color) }}
+                    on:click={() => {
+                        setColor(color)
+                        localStorage.setItem('color', name)
+                    }}
                     title={name}
                     use:style={{
                         backgroundImage: `linear-gradient(135deg, ${color.list[1]} 0%, ${color.list[1]} 50%, ${color.list[6]} 50%, ${color.list[6]} 100%)`,
@@ -53,7 +57,10 @@
                 {:else if color.type === 'sequential'}
                 <button
                     class="border-0 h-8 rounded-full w-8"
-                    on:click={() => { setColor(color) }}
+                    on:click={() => {
+                        setColor(color)
+                        localStorage.setItem('color', name)
+                    }}
                     title={name}
                     use:style={{
                         backgroundColor: color.list[4],
