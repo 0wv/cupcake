@@ -3,6 +3,7 @@
 	import CupcakeListHeader from '../components/CupcakeListHeader.svelte';
 	import CupcakeNew from '../components/CupcakeNew.svelte';
 	import { color } from '../stores';
+	import { _ } from 'svelte-i18n'
 	import style from 'svelte-inline-css';
 </script>
 
@@ -22,6 +23,6 @@
 		<a
 			class="block p-2 text-center"
 			href="#/credits"
-		>Credits</a>
+		>{$_('routes.Credits.credits')}</a>
 	</footer>
 </main>

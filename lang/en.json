@@ -1,0 +1,27 @@
+{
+  "components": {
+    "CupcakeItem": {
+      "daysago": "days ago",
+      "daysleft": "days left",
+      "today": "Today",
+      "tomorrow": "Tomorrow",
+      "yesterday": "Yesterday"
+    },
+    "CupcakeListHeader": {
+      "colors": "Colors",
+      "removeExpiredCupcakes": "Remove expired cupcakes"
+    },
+    "CupcakeNew": {
+      "newCupcake": "New Cupcake"
+    }
+  },
+  "routes": {
+    "Credits": {
+      "credits": "Credits",
+      "dependencies": "Dependencies",
+      "listOfDependencies": "List of dependencies",
+      "returnToMainPage": "Return to main page",
+      "waiting": "...waiting"
+    }
+  }
+}

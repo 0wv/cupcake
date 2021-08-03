@@ -2,6 +2,7 @@
     import { colorByName } from '../colors'
     import type { Color } from '../colors'
     import { color, cupcakes } from '../stores'
+    import { _ } from 'svelte-i18n'
     import style from 'svelte-inline-css'
 
     function removeExpiredCupcakes () {
@@ -27,7 +28,7 @@
             bind:this={details}
             class="p-4"
         >
-            <summary>Colors</summary>
+            <summary>{$_('components.CupcakeListHeader.colors')}</summary>
             <div
                 class="fixed h-screen left-0 top-0 w-screen"
                 on:click={() => { details.open = false }}
@@ -70,6 +71,6 @@
             use:style={{
                 borderColor: $color.text,
             }}
-        >Remove expired cupcakes</button>
+        >{$_('components.CupcakeListHeader.removeExpiredCupcakes')}</button>
     </div>
 </div>

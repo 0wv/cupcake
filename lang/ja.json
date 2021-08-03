@@ -1,0 +1,27 @@
+{
+  "components": {
+    "CupcakeItem": {
+      "daysago": "日前",
+      "daysleft": "日後",
+      "today": "今日",
+      "tomorrow": "明日",
+      "yesterday": "昨日"
+    },
+    "CupcakeListHeader": {
+      "colors": "見た目",
+      "removeExpiredCupcakes": "期限切れのカップケーキを取り除く"
+    },
+    "CupcakeNew": {
+      "newCupcake": "新しいカップケーキ"
+    }
+  },
+  "routes": {
+    "Credits": {
+      "credits": "クレジット",
+      "dependencies": "依存関係",
+      "listOfDependencies": "依存関係のリスト",
+      "returnToMainPage": "メインページに戻る",
+      "waiting": "…お待ちください"
+    }
+  }
+}

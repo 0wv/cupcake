@@ -1,6 +1,7 @@
 <script lang="ts">
     import DependencyList from '../components/DependencyList.svelte'
     import { color } from '../stores'
+    import { _ } from 'svelte-i18n'
     import style from 'svelte-inline-css'
 
     const fetchDependencies = (async () => {
@@ -22,14 +23,14 @@
     <a
         class="p-2"
         href="#/"
-    >Return to main page</a>
+    >{$_('routes.Credits.returnToMainPage')}</a>
     <div class="mb-auto">
-        <h1 class="p-2 text-2xl">Credits</h1>
-        <h2 class="p-2 text-xl">Dependencies</h2>
+        <h1 class="p-2 text-2xl">{$_('routes.Credits.credits')}</h1>
+        <h2 class="p-2 text-xl">{$_('routes.Credits.dependencies')}</h2>
         <details class="p-2">
-            <summary>List of dependencies</summary>
+            <summary>{$_('routes.Credits.listOfDependencies')}</summary>
             {#await fetchDependencies}
-            <p>...waiting</p>
+            <p>{$_('routes.Credits.waiting')}</p>
             {:then dependencies}
             <DependencyList {dependencies}></DependencyList>
             {/await}
@@ -38,5 +39,5 @@
     <a
         class="block p-2 text-center"
         href="#/"
-    >Return to main page</a>
+    >{$_('routes.Credits.returnToMainPage')}</a>
 </div>

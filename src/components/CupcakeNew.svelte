@@ -1,6 +1,7 @@
 <script lang="ts">
     import { color, cupcakes } from '../stores'
     import { DateTime } from 'luxon'
+    import { _ } from 'svelte-i18n'
     import style from 'svelte-inline-css'
 
     let date = DateTime.now()
@@ -49,6 +50,6 @@
             use:style={{
                 borderColor: $color.text,
             }}
-        >New Cupcake</button>
+        >{$_('components.CupcakeNew.newCupcake')}</button>
     </div>
 </div>
