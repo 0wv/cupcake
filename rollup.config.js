@@ -6,6 +6,7 @@ import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
+import json from '@rollup/plugin-json';
 import license from 'rollup-plugin-license';
 import * as path from 'path';
 
@@ -60,6 +61,8 @@ export default {
 		// we'll extract any component CSS out into
 		// a separate file - better for performance
 		css({ output: 'bundle.css' }),
+
+		json(),
 
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In
