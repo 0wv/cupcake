@@ -33,6 +33,7 @@
     "luxon": "^2.0.1",
     "marked": "^2.1.3",
     "sirv-cli": "^1.0.0",
+    "svelte-i18n": "^3.3.9",
     "svelte-inline-css": "^1.2.0",
     "svelte-spa-router": "^3.2.0"
   }
