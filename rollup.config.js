@@ -6,6 +6,8 @@ import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
+import license from 'rollup-plugin-license';
+import * as path from 'path';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -72,6 +74,18 @@ export default {
 		typescript({
 			sourceMap: !production,
 			inlineSources: !production
+		}),
+
+		license({
+			thirdParty: {
+				includePrivate: false,
+				output: {
+					file: path.join(__dirname, 'public/build', 'dependencies.json'),
+					template (dependencies) {
+						return JSON.stringify(dependencies)
+					}
+				}
+			}
 		}),
 
 		// In dev mode, call `npm run start` once
