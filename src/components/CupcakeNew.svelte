@@ -56,7 +56,7 @@
 </script>
 
 <div class="flex flex-wrap sm:flex-nowrap">
-    <div class="flex-initial m-2 sm:flex-1 sm:w-auto w-full">
+    <div class="brightness-105 filter flex-initial m-2 sm:flex-1 sm:w-auto w-full">
         <input
             bind:value
             class="border input px-4 py-2 rounded-2xl w-full"
@@ -69,13 +69,14 @@
             }}
         >
     </div>
-    <div class="flex-auto m-2 sm:flex-initial">
+    <div class="brightness-105 filter flex-auto m-2 sm:flex-initial">
         <div
             class="border border-dotted p-2 rounded-full text-center"
             on:touchmove={onTouchmove}
             on:touchstart={onTouchstart}
             on:wheel={onWheel}
             use:style={{
+                backgroundColor: $color.background,
                 borderColor: $color.text,
                 fontFamily: monospace,
             }}
@@ -97,7 +98,6 @@
 
 <style lang="postcss">
     .input::placeholder {
-        @apply opacity-80;
         color: var(--text);
     }
 </style>
