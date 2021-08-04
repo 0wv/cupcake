@@ -14,6 +14,7 @@
 		color: $color.text,
 	}}
 >
+	<h1 class="p-2 text-2xl">Cupcake 🧁</h1>
 	<CupcakeNew></CupcakeNew>
 	<CupcakeListHeader></CupcakeListHeader>
 	<CupcakeList></CupcakeList>
