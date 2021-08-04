@@ -1,10 +1,13 @@
 <script lang="ts">
     import CupcakeItem from './CupcakeItem.svelte';
-    import { cupcakes } from '../stores';
+    import { color, cupcakes } from '../stores';
+    import style from 'svelte-inline-css';
 </script>
 
-<div class="mb-auto">
+<div class="divide-y mb-auto">
     {#each $cupcakes as cupcake}
-    <CupcakeItem {cupcake}></CupcakeItem>
+    <div use:style={{ borderColor: $color.text }}>
+        <CupcakeItem {cupcake}></CupcakeItem>
+    </div>
     {/each}
 </div>
