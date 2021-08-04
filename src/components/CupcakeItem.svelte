@@ -11,7 +11,7 @@
 
 <div class="flex">
     <div class="flex-1 m-2">
-        <div>{cupcake.value}</div>
+        <div use:style={{ fontFamily: main }}>{cupcake.value}</div>
     </div>
     <div class="flex-initial m-2">
         <div use:style={{ fontFamily: main }}>
