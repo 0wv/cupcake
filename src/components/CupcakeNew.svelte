@@ -19,6 +19,7 @@
     }
 
     function onTouchmove (event) {
+        event.preventDefault()
         const swipeInterval = 50
         const touchendY = event.touches[0].pageY
 
@@ -66,7 +67,7 @@
     </div>
     <div class="flex-1 m-2 sm:flex-initial">
         <div
-            class="border-2 border-dotted overscroll-y-none p-4 rounded-full text-center"
+            class="border-2 border-dotted p-4 rounded-full text-center"
             on:touchmove={onTouchmove}
             on:touchstart={onTouchstart}
             on:wheel={onWheel}
