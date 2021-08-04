@@ -1,12 +1,11 @@
 <script lang="ts">
 	import { colorByName } from './colors';
+	import Font from './components/Font.svelte';
 	import Tailwind from './components/Tailwind.svelte';
 	import './i18n';
 	import Credits from './routes/Credits.svelte';
 	import Main from './routes/Main.svelte';
 	import { color, cupcakes } from './stores';
-	import '@fontsource/courier-prime';
-	import '@fontsource/yomogi';
 	import Router from 'svelte-spa-router';
 
 	const routes = {
@@ -26,6 +25,7 @@
 
 <Router {routes}></Router>
 
+<Font></Font>
 <Tailwind />
 
 <style lang="postcss">
