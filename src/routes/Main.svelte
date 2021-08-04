@@ -16,9 +16,7 @@
 >
 	<CupcakeNew></CupcakeNew>
 	<CupcakeListHeader></CupcakeListHeader>
-	<div class="mb-auto">
-		<CupcakeList></CupcakeList>
-	</div>
+	<CupcakeList></CupcakeList>
 	<footer>
 		<a
 			class="block p-2 text-center"

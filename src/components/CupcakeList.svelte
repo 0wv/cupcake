@@ -3,6 +3,8 @@
     import { cupcakes } from '../stores';
 </script>
 
-{#each $cupcakes as cupcake}
+<div class="mb-auto">
+    {#each $cupcakes as cupcake}
     <CupcakeItem {cupcake}></CupcakeItem>
-{/each}
+    {/each}
+</div>
