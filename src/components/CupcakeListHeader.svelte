@@ -20,11 +20,11 @@
     let details: HTMLDetailsElement
 </script>
 
-<div class="flex">
-    <div class="flex-1 m-2">
+<div class="flex flex-wrap sm:flex-nowrap">
+    <div class="flex-1 hidden m-2 sm:block">
         <div class="p-4 w-full"></div>
     </div>
-    <div class="flex-initial m-2">
+    <div class="flex-initial m-2 sm:w-auto w-full">
         <details
             bind:this={details}
             class="p-4"
@@ -71,9 +71,9 @@
             </div>
         </details>
     </div>
-    <div class="flex-initial m-2">
+    <div class="flex-initial m-2 sm:w-auto w-full">
         <button
-            class="border-2 p-4 rounded-full"
+            class="border-2 p-4 rounded-full sm:w-auto w-full"
             on:click={removeExpiredCupcakes}
             use:style={{
                 borderColor: $color.text,

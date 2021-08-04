@@ -26,8 +26,8 @@
     }
 </script>
 
-<div class="flex">
-    <div class="flex-1 m-2">
+<div class="flex flex-wrap sm:flex-nowrap">
+    <div class="flex-initial m-2 sm:flex-1 sm:w-auto w-full">
         <input
             bind:value
             class="border-2 p-4 rounded-full w-full"
@@ -38,18 +38,18 @@
             }}
         >
     </div>
-    <div class="flex-initial m-2">
+    <div class="flex-1 m-2 sm:flex-initial">
         <div
-            class="border-2 border-dotted p-4 rounded-full"
+            class="border-2 border-dotted p-4 rounded-full text-center"
             on:wheel={onWheel}
             use:style={{
                 borderColor: $color.text,
             }}
         >{date.toISODate()}</div>
     </div>
-    <div class="flex-initial m-2">
+    <div class="flex-1 m-2 sm:flex-initial">
         <button
-            class="border-2 p-4 rounded-full"
+            class="border-2 p-4 rounded-full w-full"
             on:click={newCupcake}
             use:style={{
                 borderColor: $color.text,
