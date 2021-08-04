@@ -6,6 +6,7 @@ import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
+import copy from 'rollup-plugin-copy-glob';
 import json from '@rollup/plugin-json';
 import license from 'rollup-plugin-license';
 import * as path from 'path';
@@ -79,6 +80,9 @@ export default {
 			inlineSources: !production
 		}),
 
+		copy([
+			{ dest: 'public/build/files', files: 'node_modules/@fontsource/yomogi/files/*-400-*' }
+		]),
 		license({
 			thirdParty: {
 				includePrivate: false,
