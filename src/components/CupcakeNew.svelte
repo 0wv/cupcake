@@ -71,7 +71,7 @@
     </div>
     <div class="brightness-105 filter flex-auto m-2 sm:flex-initial">
         <div
-            class="border border-dotted p-2 rounded-full text-center"
+            class="border-4 border-double p-2 rounded-full text-center"
             on:touchmove={onTouchmove}
             on:touchstart={onTouchstart}
             on:wheel={onWheel}
