@@ -28,7 +28,7 @@
     <div class="flex-initial m-2 sm:w-auto w-full">
         <details
             bind:this={details}
-            class="p-4"
+            class="pl-4 sm:p-4"
         >
             <summary use:style={{ fontFamily: main }}>{$_('components.CupcakeListHeader.colors')}</summary>
             <div
