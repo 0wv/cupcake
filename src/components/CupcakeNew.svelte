@@ -59,7 +59,7 @@
     <div class="flex-initial m-2 sm:flex-1 sm:w-auto w-full">
         <input
             bind:value
-            class="border-2 input p-4 rounded-full w-full"
+            class="border input p-4 rounded-full w-full"
             placeholder={$_('components.CupcakeNew.whatKindOfCupcake')}
             type="text"
             use:style={{
@@ -71,7 +71,7 @@
     </div>
     <div class="flex-1 m-2 sm:flex-initial">
         <div
-            class="border-2 border-dotted p-4 rounded-full text-center"
+            class="border border-dotted p-4 rounded-full text-center"
             on:touchmove={onTouchmove}
             on:touchstart={onTouchstart}
             on:wheel={onWheel}
@@ -83,7 +83,7 @@
     </div>
     <div class="flex-1 m-2 sm:flex-initial">
         <button
-            class="border-2 p-4 rounded-full w-full"
+            class="border p-4 rounded-full w-full"
             on:click={newCupcake}
             use:style={{
                 borderColor: $color.text,

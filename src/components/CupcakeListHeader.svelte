@@ -74,7 +74,7 @@
     </div>
     <div class="flex-initial m-2 sm:w-auto w-full">
         <button
-            class="border-2 p-4 rounded-full sm:w-auto w-full"
+            class="border p-4 rounded-full sm:w-auto w-full"
             on:click={removeExpiredCupcakes}
             use:style={{
                 borderColor: $color.text,
