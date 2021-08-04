@@ -59,7 +59,7 @@
     <div class="flex-initial m-2 sm:flex-1 sm:w-auto w-full">
         <input
             bind:value
-            class="border input p-4 rounded-full w-full"
+            class="border input px-4 py-2 rounded-2xl w-full"
             placeholder={$_('components.CupcakeNew.whatKindOfCupcake')}
             type="text"
             use:style={{
@@ -69,9 +69,9 @@
             }}
         >
     </div>
-    <div class="flex-1 m-2 sm:flex-initial">
+    <div class="flex-auto m-2 sm:flex-initial">
         <div
-            class="border border-dotted p-4 rounded-full text-center"
+            class="border border-dotted p-2 rounded-full text-center"
             on:touchmove={onTouchmove}
             on:touchstart={onTouchstart}
             on:wheel={onWheel}
@@ -81,9 +81,9 @@
             }}
         >📅 {date.toISODate()}</div>
     </div>
-    <div class="flex-1 m-2 sm:flex-initial">
+    <div class="flex-auto m-2 sm:flex-initial">
         <button
-            class="border p-4 rounded-full w-full"
+            class="border p-2 rounded-full w-full"
             on:click={newCupcake}
             use:style={{
                 borderColor: $color.text,
