@@ -40,8 +40,11 @@
     </div>
     <div class="flex-initial m-2">
         <div
-            class="p-4"
+            class="border-2 border-dotted p-4 rounded-full"
             on:wheel={onWheel}
+            use:style={{
+                borderColor: $color.text,
+            }}
         >{date.toISODate()}</div>
     </div>
     <div class="flex-initial m-2">
