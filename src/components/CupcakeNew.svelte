@@ -50,13 +50,15 @@
             date = date.minus({ days: 1 })
         }
     }
+
+    $: document.documentElement.style.setProperty('--text', $color.text)
 </script>
 
 <div class="flex flex-wrap sm:flex-nowrap">
     <div class="flex-initial m-2 sm:flex-1 sm:w-auto w-full">
         <input
             bind:value
-            class="border-2 p-4 rounded-full w-full"
+            class="border-2 input p-4 rounded-full w-full"
             placeholder={$_('components.CupcakeNew.whatKindOfCupcake')}
             type="text"
             use:style={{
@@ -86,3 +88,10 @@
         >{$_('components.CupcakeNew.newCupcake')}</button>
     </div>
 </div>
+
+<style lang="postcss">
+    .input::placeholder {
+        @apply opacity-80;
+        color: var(--text);
+    }
+</style>
