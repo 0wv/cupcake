@@ -18,6 +18,7 @@
     "autoprefixer": "^10.3.1",
     "postcss": "^8.3.5",
     "rollup": "^2.3.4",
+    "rollup-plugin-copy-glob": "^0.3.1",
     "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-license": "^2.5.0",
     "rollup-plugin-livereload": "^2.0.0",
