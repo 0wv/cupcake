@@ -1,6 +1,7 @@
 <script lang="ts">
     import { colorByName } from '../colors'
     import type { Color } from '../colors'
+    import { main } from '../fonts'
     import { color, cupcakes } from '../stores'
     import { DateTime } from 'luxon'
     import { _ } from 'svelte-i18n'
@@ -29,7 +30,7 @@
             bind:this={details}
             class="p-4"
         >
-            <summary>{$_('components.CupcakeListHeader.colors')}</summary>
+            <summary use:style={{ fontFamily: main }}>{$_('components.CupcakeListHeader.colors')}</summary>
             <div
                 class="fixed h-screen left-0 top-0 w-screen"
                 on:click={() => { details.open = false }}
@@ -77,6 +78,7 @@
             on:click={removeExpiredCupcakes}
             use:style={{
                 borderColor: $color.text,
+                fontFamily: main,
             }}
         >{$_('components.CupcakeListHeader.removeExpiredCupcakes')}</button>
     </div>

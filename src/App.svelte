@@ -5,6 +5,7 @@
 	import Credits from './routes/Credits.svelte';
 	import Main from './routes/Main.svelte';
 	import { color, cupcakes } from './stores';
+	import '@fontsource/yomogi';
 	import Router from 'svelte-spa-router';
 
 	const routes = {

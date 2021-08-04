@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { main } from '../fonts'
     import { color, cupcakes } from '../stores'
     import { DateTime } from 'luxon'
     import { _ } from 'svelte-i18n'
@@ -64,6 +65,7 @@
             use:style={{
                 backgroundColor: $color.background,
                 borderColor: $color.text,
+                fontFamily: main,
             }}
         >
     </div>
@@ -84,6 +86,7 @@
             on:click={newCupcake}
             use:style={{
                 borderColor: $color.text,
+                fontFamily: main,
             }}
         >{$_('components.CupcakeNew.newCupcake')}</button>
     </div>
