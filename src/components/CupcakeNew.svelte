@@ -5,7 +5,6 @@
     import style from 'svelte-inline-css'
 
     let date = DateTime.now()
-    let touchendY = 0
     let touchstartY = 0
     let value = ''
 
@@ -19,18 +18,24 @@
         localStorage.setItem('cupcakes', JSON.stringify($cupcakes))
     }
 
-    function onTouchend () {
-        if ((touchendY - touchstartY) > 0) {
-            // 下方向にスワイプされたとき
-            date = date.minus({ days: 1 })
-        } else {
-            // 上方向にスワイプされたとき
-            date = date.plus({ days: 1 })
-        }
-    }
-
     function onTouchmove (event) {
-        touchendY = event.touches[0].pageY
+        const swipeInterval = 50
+        const touchendY = event.touches[0].pageY
+
+        if (
+            Math.abs(touchendY) > Math.abs(touchstartY) + swipeInterval ||
+            Math.abs(touchendY) + swipeInterval < Math.abs(touchstartY)
+        ) {
+            if ((touchendY - touchstartY) > 0) {
+                // 下方向にスワイプされたとき
+                date = date.minus({ days: 1 })
+            } else {
+                // 上方向にスワイプされたとき
+                date = date.plus({ days: 1 })
+            }
+
+            onTouchstart(event)
+        }
     }
 
     function onTouchstart (event) {
@@ -62,7 +67,6 @@
     <div class="flex-1 m-2 sm:flex-initial">
         <div
             class="border-2 border-dotted overscroll-y-none p-4 rounded-full text-center"
-            on:touchend={onTouchend}
             on:touchmove={onTouchmove}
             on:touchstart={onTouchstart}
             on:wheel={onWheel}
