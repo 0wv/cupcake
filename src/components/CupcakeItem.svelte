@@ -11,15 +11,10 @@
 
 <div class="flex">
     <div class="flex-1 m-2">
-        <div class="p-4">{cupcake.value}</div>
+        <div>{cupcake.value}</div>
     </div>
     <div class="flex-initial m-2">
-        <div
-            class="p-4"
-            use:style={{
-                fontFamily: main,
-            }}
-        >
+        <div use:style={{ fontFamily: main }}>
             {#if daysleft === -1}
             {$_('components.CupcakeItem.yesterday')}
             {:else if daysleft === 0}

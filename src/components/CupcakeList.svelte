@@ -4,7 +4,7 @@
     import style from 'svelte-inline-css';
 </script>
 
-<div class="divide-y mb-auto">
+<div class="divide-dashed divide-y mb-auto px-4">
     {#each $cupcakes as cupcake}
     <div use:style={{ borderColor: $color.text }}>
         <CupcakeItem {cupcake}></CupcakeItem>
