@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { main } from '../fonts'
+    import { main, monospace } from '../fonts'
     import { color, cupcakes } from '../stores'
     import { DateTime } from 'luxon'
     import { _ } from 'svelte-i18n'
@@ -77,6 +77,7 @@
             on:wheel={onWheel}
             use:style={{
                 borderColor: $color.text,
+                fontFamily: monospace,
             }}
         >📅 {date.toISODate()}</div>
     </div>
