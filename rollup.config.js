@@ -81,6 +81,7 @@ export default {
 		}),
 
 		copy([
+			{ dest: 'public/build/files', files: 'node_modules/@fontsource/comfortaa/files/*-400-*' },
 			{ dest: 'public/build/files', files: 'node_modules/@fontsource/courier-prime/files/*-400-*' },
 			{ dest: 'public/build/files', files: 'node_modules/@fontsource/yomogi/files/*-400-*' }
 		]),
