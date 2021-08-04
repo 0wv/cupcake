@@ -46,7 +46,7 @@
             use:style={{
                 borderColor: $color.text,
             }}
-        >{date.toISODate()}</div>
+        >📅 {date.toISODate()}</div>
     </div>
     <div class="flex-1 m-2 sm:flex-initial">
         <button
