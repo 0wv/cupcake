@@ -74,10 +74,12 @@
     </div>
     <div class="flex-initial m-2 sm:w-auto w-full">
         <button
-            class="border p-2 rounded-full sm:w-auto w-full"
+            class="border-4 border-double p-2 rounded-full shadow sm:w-auto w-full"
             on:click={removeExpiredCupcakes}
             use:style={{
-                borderColor: $color.text,
+                backgroundColor: $color.text,
+                borderColor: $color.background,
+                color: $color.background,
                 fontFamily: main,
             }}
         >{$_('components.CupcakeListHeader.removeExpiredCupcakes')}</button>

@@ -83,10 +83,12 @@
     </div>
     <div class="flex-auto m-2 sm:flex-initial">
         <button
-            class="border p-2 rounded-full w-full"
+            class="border-4 border-double p-2 rounded-full shadow w-full"
             on:click={newCupcake}
             use:style={{
-                borderColor: $color.text,
+                backgroundColor: $color.text,
+                borderColor: $color.background,
+                color: $color.background,
                 fontFamily: main,
             }}
         >{$_('components.CupcakeNew.newCupcake')}</button>
