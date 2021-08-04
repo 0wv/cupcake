@@ -12,7 +12,8 @@
       "removeExpiredCupcakes": "期限切れのカップケーキを取り除く"
     },
     "CupcakeNew": {
-      "newCupcake": "新しいカップケーキ"
+      "newCupcake": "新しいカップケーキ",
+      "whatKindOfCupcake": "どんなカップケーキ？"
     }
   },
   "routes": {

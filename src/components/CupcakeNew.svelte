@@ -31,6 +31,7 @@
         <input
             bind:value
             class="border-2 p-4 rounded-full w-full"
+            placeholder={$_('components.CupcakeNew.whatKindOfCupcake')}
             type="text"
             use:style={{
                 backgroundColor: $color.background,
